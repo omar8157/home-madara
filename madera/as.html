@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>MADERA</title>
+    
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="r.png" alt="Logo">
+        </a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li> <a href="login.html">Login</a></li>
+        </ul>
+       
+    </header>
+    <section class="home" id="home">
+        <img src="n.png">
+    </section>
+    <section class="categories" id="categories">
+            <h2 class="section-title">Categories</h2>
+            <div class="categories-container">
+                <a href="/tebleux/man/index.html" target="_blank" class="category-link">
+                    <img src="cat,t.jpg" alt="Category 1">
+                    <span>TABELS</span>
+                </a>
+                <a href="/games/index .html" target="_blank" class="category-link">
+                    <img src="cat,g.png" alt="Category 2">
+                    <span>GAMING</span>
+                </a>
+                <a href="/shelves/shelves/My Categorie/index.html" target="_blank" class="category-link">
+                    <img src="s.png" alt="Category 3">
+                    <span>SHELVES</span>
+                </a>
+            </div>
+    </section>
+    <hr >
+    <section class="products" id="products">
+        <div class="heading">
+            <h2>Our Popular Products</h2>
+        </div>
+        <section class="sec">
+            <div class="card">
+                <div class="img">
+                    <img src="t.png" alt="Add to Cart">
+                </div>
+                <div class="title">Horse triplex plates </div>
+                <div class="price">520EPG</div>
+                <div class="icon">
+                    <a href="cart.html" onclick="addToCart(); return false;">
+                        <img src="v.png" alt="Add to Cart">
+                    </a>
+                </div> 
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="g.png" alt="Add to Cart">
+                </div>
+                <div class="title">PlayStation controller</div>
+                <div class="price">350EPG</div>
+                <div class="icon">
+                    <a href="cart.html" onclick="addToCart(); return false;">
+                        <img src="v.png" alt="Add to Cart">
+                    </a>
+                </div> 
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="y.jpg" alt="Add to Cart">
+                </div>
+                <div class="title">rocket shelve</div>
+                <div class="price">450EPG</div>
+                <div class="icon">
+                    <a href="cart.html" onclick="addToCart(); return false;">
+                        <img src="v.png" alt="Add to Cart">
+                    </a>
+                </div> 
+            </div>
+        </section>
+        <div class="notification">Item added to cart</div>
+    </section>
+    <hr >
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="i.jpg" alt="Wooden decorations">
+        </div>
+        <div class="about-text">
+            <h2>ABOUT US</h2>
+            <p>Madeira is a workshop that was developed in 2022 and has been a carpentry workshop for more than seven years. It creates beautiful wooden decorations for all places and surfaces, as well as simple home furniture that complements the beauty of any space.</p>
+        </div>  </section>
+        <section class="footer">
+            <div class="footer-box">
+                <div class="footer-item">
+                    <div class="footer-info">
+                        <i class='bx bx-phone'></i>
+                        <a href="#">Call us</a>
+                    </div>
+                    <p>01158910034</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-info">
+                        <i class='bx bxl-whatsapp'></i>
+                        <a href="#">Whatsapp</a>
+                    </div>
+                    <p>+201158910034</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-info">
+                        <i class='bx bxl-facebook-circle'></i>
+                        <a href="https://www.facebook.com/share/Bn13dEQhFpwLz7tJ/">Facebook</a>
+                    </div>
+                    <a href="https://www.facebook.com/share/Bn13dEQhFpwLz7tJ/">ماديرا - Madera@</a>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-info">
+                        <i class='bx bxl-gmail'></i>
+                        <a href="mailto:madera.cnc@gmail.com">Email Us</a>
+                    </div>
+                   <a href=" mailto:madera.cnc@gmail.com">madera.cnc@gmail.com</a>
+            </div></div></section>
+        </section>
+        <script>  function addToCart(){
+           let notification = document.querySelector('.notification');
+            if (!notification) {
+                notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = 'Item added to cart';
+                document.body.appendChild(notification);
+            }
+            notification.style.display = 'block';
+            notification.style.opacity = '1';
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 300);
+            }, 2000);
+        }
+       
+</script>
+</body>
+</html>
